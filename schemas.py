@@ -14,7 +14,6 @@ class AuthorCreate(AuthorBase):
 
 class AuthorsList(AuthorBase):
     id: int
-    books: "BooksList"
 
     class Config:
         from_attributes = True
@@ -32,7 +31,7 @@ class BookCreate(BookBase):
 
 class BooksList(BookBase):
     id: int
-    authors: AuthorsList
+    author: AuthorsList
 
     class Config:
         from_attributes = True
